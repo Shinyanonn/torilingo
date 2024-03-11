@@ -1,4 +1,5 @@
 "use client";
+import { Camera, Phone, Swords, User } from "lucide-react";
 
 import {
   UserGroupIcon,
@@ -12,13 +13,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 const links = [
-  { name: "Home", href: "/dashboard", icon: HomeIcon },
+  { name: "Home", href: "/home", icon: HomeIcon },
   {
-    name: "Invoices",
-    href: "/dashboard/invoices",
-    icon: DocumentDuplicateIcon,
+    name: "Mypage",
+    href: "/mypage",
+    icon: User,
   },
-  { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
+  { name: "War", href: "/war", icon: Swords },
+
+  { name: "Call", href: "/call", icon: Phone },
 ];
 
 export default function NavLinks() {
