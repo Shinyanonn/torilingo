@@ -1,14 +1,18 @@
 // WordList.tsx
 import React from "react";
+import { WordCard } from "./page";
 
 interface WordListProps {
-  words: string[];
+  wordCard1: WordCard[];
 }
 
-const WordList: React.FC<WordListProps> = ({ words }) => (
+const WordList: React.FC<WordListProps> = ({ wordCard1 }) => (
   <ul>
-    {words.map((word, index) => (
-      <li key={index}>{word}</li>
+    {wordCard1.map((wordCard, index) => (
+      <div key={index} className="">
+        <li>{wordCard.word}</li>
+        <li>{wordCard.meaning}</li>
+      </div>
     ))}
   </ul>
 );
